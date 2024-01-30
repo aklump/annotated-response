@@ -69,4 +69,4 @@ return new \AKlump\AnnotatedResponse\HttpFoundation\JsonResponse($response);
     ]
     ```
 
-1. Then `composer require aklump/annotated-response:@dev`
+1. Then `composer require aklump/annotated-response:^0.0`
