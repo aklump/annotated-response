@@ -15,7 +15,7 @@ This library provides a response model for API design. It features:
         "user": "foobar"
     },
     "message": "Login complete.",
-    "result": "Success",
+    "result": "succeeded",
     "user_messages": [
         {
             "context": [],

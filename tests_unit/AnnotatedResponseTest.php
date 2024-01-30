@@ -45,11 +45,18 @@ class AnnotatedResponseTest extends TestCase {
     $this->assertSame($expected_result, $response->jsonSerialize()['result']);
   }
 
+  public function testCustomStatusMessageOverwritesAutomatic() {
+    $response = new AnnotatedResponse();
+    $response->setHttpStatus(200);
+    $this->assertSame('succeeded', $response->jsonSerialize()['result']);
+    $response->setResult('Gjekk bra');
+    $this->assertSame('Gjekk bra', $response->jsonSerialize()['result']);
+  }
+
   public function testJsonSerialize() {
     $response = new AnnotatedResponse();
     $response
       ->setHttpStatus(200)
-      ->setResult('Success')
       ->setMessage('Login complete.')
       ->setData(['lorem' => 'L'])
       ->addUserMessage(LogLevel::INFO, 'You have been logged in.')
@@ -59,7 +66,6 @@ class AnnotatedResponseTest extends TestCase {
 
     $this->assertSame(['lorem' => 'L'], $data['data']);
     $this->assertSame('Login complete.', $data['message']);
-    $this->assertSame('Success', $data['result']);
 
     $this->assertSame([], $data['user_messages'][0]['context']);
     $this->assertSame('info', $data['user_messages'][0]['level']);
