@@ -60,3 +60,5 @@ Convert the above object to a JsonResponse object:
 ```php
 return new \AKlump\AnnotatedResponse\HttpFoundation\JsonResponse($response);
 ```
+
+{{ composer_install|raw }}

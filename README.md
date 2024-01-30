@@ -55,3 +55,18 @@ Convert the above object to a JsonResponse object:
 ```php
 return new \AKlump\AnnotatedResponse\HttpFoundation\JsonResponse($response);
 ```
+
+## Install with Composer
+
+1. Because this is an unpublished package, you must define it's repository in your project's _composer.json_ file. Add the following to _composer.json_:
+
+    ```json
+    "repositories": [
+        {
+            "type": "github",
+            "url": "https://github.com/aklump/annotated-response"
+        }
+    ]
+    ```
+
+1. Then `composer require aklump/annotated-response:@dev`
