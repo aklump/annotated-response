@@ -1,5 +1,7 @@
 # Annotated Response
 
+![Hero](images/hero.jpg)
+
 This library provides a response model for API design. It features:
 
 * ... data transport in every response.
@@ -15,7 +17,7 @@ This library provides a response model for API design. It features:
         "user": "foobar"
     },
     "message": "Login complete.",
-    "result": "succeeded",
+    "result": "Success",
     "user_messages": [
         {
             "context": [],

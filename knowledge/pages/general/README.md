@@ -5,6 +5,8 @@ tags: ''
 
 # Annotated Response
 
+![Hero](../../images/hero.jpg)
+
 This library provides a response model for API design. It features:
 
 * ... data transport in every response.
