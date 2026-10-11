@@ -58,15 +58,20 @@ return new \AKlump\AnnotatedResponse\HttpFoundation\JsonResponse($response);
 
 ## Install with Composer
 
-1. Because this is an unpublished package, you must define it's repository in your project's _composer.json_ file. Add the following to _composer.json_:
+1. Installation requires explicit repositories:
+   
+   ```shell
+   composer config repositories.f33a6e19cf5163b82deb4ec0dc883bbe github https://github.com/aklump/annotated-response
+   ```
 
-    ```json
-    "repositories": [
-        {
-            "type": "github",
-            "url": "https://github.com/aklump/annotated-response"
-        }
-    ]
-    ```
-
-1. Then `composer require aklump/annotated-response:^0.0`
+2. Require the latest stable version:
+   
+   ```shell
+   composer require aklump/annotated-response:">=0.0.1 <0.1"
+   ```
+3. ... or require the dev channel:
+   
+   ```shell
+   composer config minimum-stability dev
+   composer require aklump/annotated-response:@dev
+   ```

@@ -9,4 +9,4 @@ push_tags: true
 remote: origin
 build_number: true
 version_file: .web_package/config.yml
-version: 0.0.2
+version: 0.0.2+6
