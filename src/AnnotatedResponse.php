@@ -57,7 +57,7 @@ final class AnnotatedResponse implements AnnotatedResponseInterface {
    *   (optional) An instance of ResultByCodeInterface. Defaults to
    *   GetResultByCodeDefaultEnglish if not provided.
    */
-  public function __construct(ResultByCodeInterface $result_by_code = NULL) {
+  public function __construct(?ResultByCodeInterface $result_by_code = NULL) {
     $this->setResultByCode($result_by_code ?? new GetResultByCodeDefaultEnglish());
     $this->statusCode = 200;
     $this->responseBody = [
