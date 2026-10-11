@@ -1,8 +1,8 @@
 -
   format: markdown
-  path: ../
   special:
-    - copy images
-  include:
+    - 'copy images'
+  output: ../
+  pages:
     - '**/README.md'
     - '**/CHANGELOG.md'

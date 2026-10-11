@@ -61,4 +61,4 @@ Convert the above object to a JsonResponse object:
 return new \AKlump\AnnotatedResponse\HttpFoundation\JsonResponse($response);
 ```
 
-{{ composer_install|raw }}
+{{ composer.install }}
